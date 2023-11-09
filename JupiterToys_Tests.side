@@ -1,0 +1,1043 @@
+{
+  "id": "5b4a7ed6-32d1-4d78-9779-da58e0da488e",
+  "version": "3.0",
+  "name": "Jupiter Toys",
+  "url": "https://jupiter.cloud.planittesting.com/#/",
+  "urls": [
+    "http://www.google.com"
+  ],
+  "plugins": [],
+  "suites": [
+    {
+      "id": "ea0c0889-a315-4859-a4ec-532f555beecc",
+      "name": "Jupiter Toys Tests",
+      "parallel": false,
+      "persistSession": false,
+      "tests": [
+        "1ea95b29-115d-42d1-9e11-82f51071e3a0",
+        "d9232e92-9801-4c39-b734-0762d1348337",
+        "2865c8de-d465-45db-8205-c5d3e961104c"
+      ],
+      "timeout": 30000
+    }
+  ],
+  "tests": [
+    {
+      "id": "1ea95b29-115d-42d1-9e11-82f51071e3a0",
+      "name": "Test Case 1",
+      "commands": [
+        {
+          "command": "setWindowSize",
+          "target": "1024x768",
+          "value": "",
+          "id": "8b776a05-0857-4f6b-baba-adcc2e37e70c"
+        },
+        {
+          "id": "81bf492b-82ab-4f14-bb8b-8c19ebe7212c",
+          "command": "open",
+          "target": "/",
+          "value": "",
+          "isBreakpoint": false
+        },
+        {
+          "command": "click",
+          "target": "linkText=Contact",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "88f70ab7-edfd-4283-a41e-fff8cf69a09e",
+          "targets": [
+            [
+              "linkText=Contact",
+              "linkText"
+            ],
+            [
+              "css=#nav-contact > a",
+              "css:finder"
+            ],
+            [
+              "xpath=(//a[contains(text(),'Contact')])[1]",
+              "xpath:link"
+            ],
+            [
+              "xpath=(//li[@id='nav-contact']/a)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=(//a[contains(@href, '#/contact')])[1]",
+              "xpath:href"
+            ],
+            [
+              "xpath=//a[contains(.,'Contact')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "linkText=Submit",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "0f873845-c46d-4a50-b9a2-a02eeced8d89",
+          "targets": [
+            [
+              "linkText=Submit",
+              "linkText"
+            ],
+            [
+              "css=.btn-contact",
+              "css:finder"
+            ],
+            [
+              "xpath=(//a[contains(text(),'Submit')])[1]",
+              "xpath:link"
+            ],
+            [
+              "xpath=(//a[contains(@href, '')])[10]",
+              "xpath:href"
+            ],
+            [
+              "xpath=//a[contains(.,'Submit')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "assertText",
+          "target": "id=forename-err",
+          "value": "Forename is required",
+          "id": "4e48b0ab-acd4-4d7c-907d-69cad3f17eef",
+          "fallbackTargets": [
+            [
+              "id=forename-err",
+              "id"
+            ],
+            [
+              "css=#forename-err",
+              "css:finder"
+            ],
+            [
+              "xpath=(//span[@id='forename-err'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=//span[contains(.,'Forename is required')]",
+              "xpath:innerText"
+            ]
+          ],
+          "comment": "Verify that the Forename error message appears"
+        },
+        {
+          "command": "assertText",
+          "target": "id=email-err",
+          "value": "Email is required",
+          "id": "b211ccd7-cb91-42ee-a41b-cac00523e2f9",
+          "fallbackTargets": [
+            [
+              "id=email-err",
+              "id"
+            ],
+            [
+              "css=#email-err",
+              "css:finder"
+            ],
+            [
+              "xpath=(//span[@id='email-err'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='email-group']/div/span)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//span[contains(.,'Email is required')]",
+              "xpath:innerText"
+            ]
+          ],
+          "comment": "Verify that the Email error message appears"
+        },
+        {
+          "command": "assertText",
+          "target": "id=message-err",
+          "value": "Message is required",
+          "id": "4182c9e0-9e4b-416f-add2-d511cc18bc13",
+          "fallbackTargets": [
+            [
+              "id=message-err",
+              "id"
+            ],
+            [
+              "css=#message-err",
+              "css:finder"
+            ],
+            [
+              "xpath=(//span[@id='message-err'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='message-group']/div/span)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//span[contains(.,'Message is required')]",
+              "xpath:innerText"
+            ]
+          ],
+          "comment": "Verify that the Message error message appears"
+        },
+        {
+          "command": "assertText",
+          "target": "css=.alert",
+          "value": "We welcome your feedback - but we won't get it unless you complete the form correctly.",
+          "id": "c4dbd431-9b96-46b3-979a-5f5913b85c0d",
+          "fallbackTargets": [
+            [
+              "css=.alert",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='header-message']/div)[1]",
+              "xpath:idRelative"
+            ]
+          ],
+          "comment": "Verify that the Mandatory error message appears"
+        },
+        {
+          "command": "type",
+          "target": "id=forename",
+          "value": "My Name",
+          "id": "3614da82-c59e-4529-bdf5-58f004ef700e",
+          "fallbackTargets": [
+            [
+              "id=forename",
+              "id"
+            ],
+            [
+              "name=forename",
+              "name"
+            ],
+            [
+              "css=#forename",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='forename'])[1]",
+              "xpath:attributes"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "id=email",
+          "value": "name1@abcmail.com",
+          "id": "82c82ff7-37b7-47b5-9d4b-7dcefb4dba9a",
+          "fallbackTargets": [
+            [
+              "id=email",
+              "id"
+            ],
+            [
+              "name=email",
+              "name"
+            ],
+            [
+              "css=#email",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='email'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='email-group']/div/input)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "id=message",
+          "value": "Hello there!",
+          "id": "f28f9e35-ac8f-4ce8-b0c1-7bfb40252a49",
+          "fallbackTargets": [
+            [
+              "id=message",
+              "id"
+            ],
+            [
+              "name=message",
+              "name"
+            ],
+            [
+              "css=#message",
+              "css:finder"
+            ],
+            [
+              "xpath=(//textarea[@id='message'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='message-group']/div/textarea)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "assertElementNotPresent",
+          "target": "id=forename-err",
+          "value": "",
+          "fallbackTargets": [
+            [
+              "id=forename-err",
+              "id"
+            ],
+            [
+              "css=#forename-err",
+              "css:finder"
+            ],
+            [
+              "xpath=(//span[@id='forename-err'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=//span[contains(.,'Forename is required')]",
+              "xpath:innerText"
+            ]
+          ],
+          "id": "f3c1b4b6-6c03-4412-b1dd-766e1600c9c1",
+          "comment": "Verify that the Forename error message does not appear"
+        },
+        {
+          "command": "assertElementNotPresent",
+          "target": "id=email-err",
+          "value": "",
+          "fallbackTargets": [
+            [
+              "id=email-err",
+              "id"
+            ],
+            [
+              "css=#email-err",
+              "css:finder"
+            ],
+            [
+              "xpath=(//span[@id='email-err'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='email-group']/div/span)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//span[contains(.,'Email is required')]",
+              "xpath:innerText"
+            ]
+          ],
+          "id": "fe1ed005-8293-4187-9c55-a1fea353a2f7",
+          "comment": "Verify that the Email error message does not appear"
+        },
+        {
+          "command": "assertElementNotPresent",
+          "target": "id=message-err",
+          "value": "",
+          "fallbackTargets": [
+            [
+              "id=message-err",
+              "id"
+            ],
+            [
+              "css=#message-err",
+              "css:finder"
+            ],
+            [
+              "xpath=(//span[@id='message-err'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='message-group']/div/span)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//span[contains(.,'Message is required')]",
+              "xpath:innerText"
+            ]
+          ],
+          "comment": "Verify that the Message error message does not appear",
+          "id": "7e5550fd-0e37-463e-b077-d49b93fece54"
+        },
+        {
+          "command": "assertNotText",
+          "target": "css=.alert",
+          "value": "We welcome your feedback - but we won't get it unless you complete the form correctly.",
+          "fallbackTargets": [
+            [
+              "css=.alert",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='header-message']/div)[1]",
+              "xpath:idRelative"
+            ]
+          ],
+          "comment": "Verify that the Mandatory error message appears",
+          "id": "21bfeeba-71fb-46af-bb88-ce84893563d1"
+        }
+      ]
+    },
+    {
+      "id": "d9232e92-9801-4c39-b734-0762d1348337",
+      "name": "Test Case 2",
+      "commands": [
+        {
+          "command": "setWindowSize",
+          "target": "1024x768",
+          "value": "",
+          "id": "23be6923-2318-493d-91cd-e141c026e07e",
+          "isBreakpoint": false
+        },
+        {
+          "command": "open",
+          "target": "/",
+          "value": "",
+          "isBreakpoint": false,
+          "id": "df8d573a-ee87-4060-b5b2-6d456b24bdaa"
+        },
+        {
+          "command": "click",
+          "target": "linkText=Contact",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "linkText=Contact",
+              "linkText"
+            ],
+            [
+              "css=#nav-contact > a",
+              "css:finder"
+            ],
+            [
+              "xpath=(//a[contains(text(),'Contact')])[1]",
+              "xpath:link"
+            ],
+            [
+              "xpath=(//li[@id='nav-contact']/a)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=(//a[contains(@href, '#/contact')])[1]",
+              "xpath:href"
+            ],
+            [
+              "xpath=//a[contains(.,'Contact')]",
+              "xpath:innerText"
+            ]
+          ],
+          "id": "af790b4b-a374-4689-bfdd-db341f24a97d"
+        },
+        {
+          "command": "type",
+          "target": "id=forename",
+          "value": "My Name",
+          "fallbackTargets": [
+            [
+              "id=forename",
+              "id"
+            ],
+            [
+              "name=forename",
+              "name"
+            ],
+            [
+              "css=#forename",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='forename'])[1]",
+              "xpath:attributes"
+            ]
+          ],
+          "id": "dfc9a16d-3ae0-4e4a-b648-84c58d5cbf19"
+        },
+        {
+          "command": "type",
+          "target": "id=email",
+          "value": "name1@abcmail.com",
+          "fallbackTargets": [
+            [
+              "id=email",
+              "id"
+            ],
+            [
+              "name=email",
+              "name"
+            ],
+            [
+              "css=#email",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='email'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='email-group']/div/input)[1]",
+              "xpath:idRelative"
+            ]
+          ],
+          "id": "07033e42-873c-489c-b953-87d989236165"
+        },
+        {
+          "command": "type",
+          "target": "id=message",
+          "value": "Hello there!",
+          "fallbackTargets": [
+            [
+              "id=message",
+              "id"
+            ],
+            [
+              "name=message",
+              "name"
+            ],
+            [
+              "css=#message",
+              "css:finder"
+            ],
+            [
+              "xpath=(//textarea[@id='message'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='message-group']/div/textarea)[1]",
+              "xpath:idRelative"
+            ]
+          ],
+          "id": "68f6d120-fed0-4fc9-b6bd-2a1869735197",
+          "isBreakpoint": false
+        },
+        {
+          "command": "click",
+          "target": "linkText=Submit",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "targets": [
+            [
+              "linkText=Submit",
+              "linkText"
+            ],
+            [
+              "css=.btn-contact",
+              "css:finder"
+            ],
+            [
+              "xpath=(//a[contains(text(),'Submit')])[1]",
+              "xpath:link"
+            ],
+            [
+              "xpath=(//a[contains(@href, '')])[10]",
+              "xpath:href"
+            ],
+            [
+              "xpath=//a[contains(.,'Submit')]",
+              "xpath:innerText"
+            ]
+          ],
+          "id": "abfe45f9-34dc-4b28-b948-cf140339d9fb",
+          "isBreakpoint": false,
+          "fallbackTargets": [
+            [
+              "linkText=Submit",
+              "linkText"
+            ],
+            [
+              "css=.btn-contact",
+              "css:finder"
+            ],
+            [
+              "xpath=(//a[contains(text(),'Submit')])[1]",
+              "xpath:link"
+            ],
+            [
+              "xpath=(//a[contains(@href, '')])[10]",
+              "xpath:href"
+            ],
+            [
+              "xpath=//a[contains(.,'Submit')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "waitForElementNotPresent",
+          "target": "css=.modal-header",
+          "value": "",
+          "id": "85897d65-8df1-498b-aaa8-939502520e0e",
+          "fallbackTargets": [
+            [
+              "css=.modal-header",
+              "css:finder"
+            ],
+            [
+              "css=.btn:nth-child(2)",
+              "css:finder"
+            ],
+            [
+              "xpath=(//a[contains(text(),'« Back')])[1]",
+              "xpath:link"
+            ],
+            [
+              "xpath=(//a[contains(@href, '')])[10]",
+              "xpath:href"
+            ],
+            [
+              "xpath=//a[contains(.,'« Back')]",
+              "xpath:innerText"
+            ]
+          ],
+          "isBreakpoint": false
+        },
+        {
+          "command": "assertText",
+          "target": "css=.alert",
+          "value": "Thanks My Name, we appreciate your feedback.",
+          "fallbackTargets": [
+            [
+              "css=.alert",
+              "css:finder"
+            ],
+            [
+              "css=#forename-err",
+              "css:finder"
+            ],
+            [
+              "xpath=(//span[@id='forename-err'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=//span[contains(.,'Forename is required')]",
+              "xpath:innerText"
+            ]
+          ],
+          "id": "55e692e6-f070-4f12-90ad-e196bfe28d74",
+          "isBreakpoint": false,
+          "comment": "Verify that the submit successful message"
+        }
+      ]
+    },
+    {
+      "id": "2865c8de-d465-45db-8205-c5d3e961104c",
+      "name": "Test Case 3",
+      "commands": [
+        {
+          "command": "setWindowSize",
+          "target": "1024x768",
+          "value": "",
+          "isBreakpoint": false,
+          "id": "bed558c2-0fb0-4a46-990a-787d188d16e0"
+        },
+        {
+          "command": "open",
+          "target": "/",
+          "value": "",
+          "isBreakpoint": false,
+          "id": "04578df4-cfbf-4384-be8b-d14bb01cba48"
+        },
+        {
+          "command": "click",
+          "target": "linkText=Start Shopping »",
+          "value": "",
+          "id": "1f81fb91-c833-446e-b373-81342c383545",
+          "fallbackTargets": [
+            [
+              "linkText=Start Shopping »",
+              "linkText"
+            ],
+            [
+              "css=.btn-success",
+              "css:finder"
+            ],
+            [
+              "xpath=(//a[contains(text(),'Start Shopping »')])[1]",
+              "xpath:link"
+            ],
+            [
+              "xpath=(//a[contains(@href, '#/shop')])[2]",
+              "xpath:href"
+            ],
+            [
+              "xpath=//a[contains(.,'Start Shopping »')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "times",
+          "target": "2",
+          "value": "",
+          "id": "2322000c-66d0-4e93-8cd7-eaad83119dfb"
+        },
+        {
+          "command": "click",
+          "target": "css=#product-2 .btn",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "91d34cdd-0676-498c-89ef-c7f1adfd7d49",
+          "targets": [
+            [
+              "css=#product-2 .btn",
+              "css:finder"
+            ],
+            [
+              "xpath=(//a[contains(text(),'Buy')])[2]",
+              "xpath:link"
+            ],
+            [
+              "xpath=(//li[@id='product-2']/div/p/a)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=(//a[contains(@href, '')])[11]",
+              "xpath:href"
+            ]
+          ]
+        },
+        {
+          "command": "end",
+          "target": "",
+          "value": "",
+          "id": "bcc69b98-d751-4d3f-b49e-e3115fb6c780"
+        },
+        {
+          "command": "times",
+          "target": "5",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "588f0094-d9b9-4c29-a474-856335a12c69",
+          "targets": [
+            [
+              "css=#product-4 .btn",
+              "css:finder"
+            ],
+            [
+              "xpath=(//a[contains(text(),'Buy')])[4]",
+              "xpath:link"
+            ],
+            [
+              "xpath=(//li[@id='product-4']/div/p/a)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=(//a[contains(@href, '')])[13]",
+              "xpath:href"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=#product-4 .btn",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "15d2edcc-bde6-4751-855b-01921c1f7345",
+          "targets": [
+            [
+              "css=#product-4 .btn",
+              "css:finder"
+            ],
+            [
+              "xpath=(//a[contains(text(),'Buy')])[4]",
+              "xpath:link"
+            ],
+            [
+              "xpath=(//li[@id='product-4']/div/p/a)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=(//a[contains(@href, '')])[13]",
+              "xpath:href"
+            ]
+          ]
+        },
+        {
+          "command": "end",
+          "target": "",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "3a0c9790-cc30-4548-8668-819077d7a5a5",
+          "targets": [
+            [
+              "css=#product-4 .btn",
+              "css:finder"
+            ],
+            [
+              "xpath=(//a[contains(text(),'Buy')])[4]",
+              "xpath:link"
+            ],
+            [
+              "xpath=(//li[@id='product-4']/div/p/a)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=(//a[contains(@href, '')])[13]",
+              "xpath:href"
+            ]
+          ]
+        },
+        {
+          "command": "times",
+          "target": "3",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "ec4cc4ca-6d74-41ea-a222-9aa1f7dac76e",
+          "targets": [
+            [
+              "css=#product-7 .btn",
+              "css:finder"
+            ],
+            [
+              "xpath=(//a[contains(text(),'Buy')])[7]",
+              "xpath:link"
+            ],
+            [
+              "xpath=(//li[@id='product-7']/div/p/a)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=(//a[contains(@href, '')])[16]",
+              "xpath:href"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=#product-7 .btn",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "6d954eb4-548b-47f6-892e-f0729d796bde",
+          "targets": [
+            [
+              "css=#product-7 .btn",
+              "css:finder"
+            ],
+            [
+              "xpath=(//a[contains(text(),'Buy')])[7]",
+              "xpath:link"
+            ],
+            [
+              "xpath=(//li[@id='product-7']/div/p/a)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=(//a[contains(@href, '')])[16]",
+              "xpath:href"
+            ]
+          ]
+        },
+        {
+          "command": "end",
+          "target": "",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "e6dbc483-5257-45df-abd1-78966be3b4da",
+          "targets": [
+            [
+              "css=#product-7 .btn",
+              "css:finder"
+            ],
+            [
+              "xpath=(//a[contains(text(),'Buy')])[7]",
+              "xpath:link"
+            ],
+            [
+              "xpath=(//li[@id='product-7']/div/p/a)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=(//a[contains(@href, '')])[16]",
+              "xpath:href"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "linkText=Cart (10)",
+          "value": "",
+          "insertBeforeLastCommand": false,
+          "frameLocation": "root",
+          "winHandleId": "root",
+          "id": "fca2f9b7-d134-4531-8fcb-9ef8f135e378",
+          "targets": [
+            [
+              "linkText=Cart (10)",
+              "linkText"
+            ],
+            [
+              "css=#nav-cart > a",
+              "css:finder"
+            ],
+            [
+              "xpath=(//li[@id='nav-cart']/a)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=(//a[contains(@href, '#/cart')])[1]",
+              "xpath:href"
+            ],
+            [
+              "xpath=//a[contains(.,'Cart (10)')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "assertText",
+          "target": "css=.cart-item:nth-child(1) > .ng-binding:nth-child(2)",
+          "value": "$10.99",
+          "fallbackTargets": [
+            [
+              "css=.cart-item:nth-child(1) > .ng-binding:nth-child(2)",
+              "css:finder"
+            ],
+            [
+              "xpath=//td[contains(.,'$10.99')]",
+              "xpath:innerText"
+            ]
+          ],
+          "id": "41ed03f1-4fe4-4f78-8df0-426ac25a56d7",
+          "comment": "Verify price of Stuffed Frog"
+        },
+        {
+          "command": "assertText",
+          "target": "css=.cart-item:nth-child(2) > .ng-binding:nth-child(2)",
+          "value": "$9.99",
+          "fallbackTargets": [
+            [
+              "css=.cart-item:nth-child(2) > .ng-binding:nth-child(2)",
+              "css:finder"
+            ],
+            [
+              "xpath=//td[contains(.,'$9.99')]",
+              "xpath:innerText"
+            ]
+          ],
+          "id": "5ab93ec2-6876-4832-a698-edc0fc663725",
+          "comment": "Verify price of Fluffy Bunny"
+        },
+        {
+          "command": "assertText",
+          "target": "css=.cart-item:nth-child(3) > .ng-binding:nth-child(2)",
+          "value": "$14.99",
+          "fallbackTargets": [
+            [
+              "css=.cart-item:nth-child(3) > .ng-binding:nth-child(2)",
+              "css:finder"
+            ],
+            [
+              "xpath=//td[contains(.,'$14.99')]",
+              "xpath:innerText"
+            ]
+          ],
+          "id": "a4e4e96e-a439-4372-837d-8c09aafbc2c2",
+          "comment": "Verify price of Valentine Bear"
+        },
+        {
+          "command": "assertText",
+          "target": "css=.cart-item:nth-child(1) > .ng-binding:nth-child(4)",
+          "value": "$21.98",
+          "fallbackTargets": [
+            [
+              "css=.cart-item:nth-child(1) > .ng-binding:nth-child(4)",
+              "css:finder"
+            ],
+            [
+              "xpath=//td[contains(.,'$21.98')]",
+              "xpath:innerText"
+            ]
+          ],
+          "id": "93e0607d-4c69-48c1-bab4-3e401adebd9f",
+          "comment": "Verify subtotal of Stuffed Frog"
+        },
+        {
+          "command": "assertText",
+          "target": "css=.cart-item:nth-child(2) > .ng-binding:nth-child(4)",
+          "value": "$49.95",
+          "id": "9b9c026f-4868-47ac-975e-a472e96d530f",
+          "fallbackTargets": [
+            [
+              "css=.cart-item:nth-child(2) > .ng-binding:nth-child(4)",
+              "css:finder"
+            ],
+            [
+              "xpath=//td[contains(.,'$49.95')]",
+              "xpath:innerText"
+            ]
+          ],
+          "comment": "Verify subtotal of Fluffy Bunny"
+        },
+        {
+          "command": "assertText",
+          "target": "css=.cart-item:nth-child(3) > .ng-binding:nth-child(4)",
+          "value": "$44.97",
+          "fallbackTargets": [
+            [
+              "css=.cart-item:nth-child(3) > .ng-binding:nth-child(4)",
+              "css:finder"
+            ],
+            [
+              "xpath=//td[contains(.,'$44.97')]",
+              "xpath:innerText"
+            ]
+          ],
+          "id": "0a1d7f6d-a06f-4ca8-aa2e-700092e4e4a0",
+          "comment": "Verify subtotal of Valentine Bear"
+        },
+        {
+          "command": "assertText",
+          "target": "css=.total",
+          "value": "Total: 116.9",
+          "fallbackTargets": [
+            [
+              "css=.total",
+              "css:finder"
+            ],
+            [
+              "xpath=//strong[contains(.,'Total: 116.9')]",
+              "xpath:innerText"
+            ]
+          ],
+          "id": "f413b39c-b4ef-4cc2-a6c6-10aa324c7f9f",
+          "comment": "Verify total price"
+        }
+      ]
+    }
+  ],
+  "snapshot": {
+    "dependencies": {},
+    "tests": [],
+    "jest": {
+      "extraGlobals": []
+    }
+  },
+  "delay": 0
+}
